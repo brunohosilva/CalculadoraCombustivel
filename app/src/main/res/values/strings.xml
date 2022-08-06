@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Calculadora Combustivel</string>
+    <string name="alcool_ou_gasolina">Álcool ou Gasolina</string>
+    <string name="descricao">Melhor opção para seu carro flex</string>
+    <string name="preco_alcool">Digite o preço do Álcool</string>
+    <string name="preco_gasolina">Digite o preço da Gasolina</string>
+    <string name="calcular">Calcular</string>
+    <string name="img_gasolina">TODO</string>
+    <string name="sem_escolha">Nenhuma opção escolhida</string>
 </resources>
