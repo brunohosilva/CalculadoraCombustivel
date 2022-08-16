@@ -11,12 +11,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // Chamada da função de click do botão calcular
         btn_calcular.setOnClickListener{
             calcularPreco()
         }
     }
 
-
+    // Função responsavel por chamar o metodo de validar campos e chamar o metodo de calcular melhor preço
+    // Se os campos não forem preenchidos é apresentado um Alerta para preencher os campos
     fun calcularPreco() {
         val precoAlcool = input_alcool.text.toString()
         val precoGasolina = input_gasolina.text.toString()
@@ -29,6 +31,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    // Metodo responsavel em validar os campos vazios
     fun validarCampos(precoAlcool: String, precoGasolina: String): Boolean {
         var camposValidados: Boolean = true
         if(precoAlcool.equals("")) {
@@ -40,6 +43,7 @@ class MainActivity : AppCompatActivity() {
         return camposValidados
     }
 
+    // Metodo que realiza o calculo para saber qual tipo de combustivel vale mais a pena
     fun calculaMelhorPreco(precoAlcool: String, precoGasolina: String) {
         val valorAlcool = precoAlcool.toDouble()
         val valorGasolina = precoGasolina.toDouble()
@@ -53,6 +57,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    // Metodo responsavel por renderizar o Alert
     fun renderAlert (title: String, description: String, textButton: String) {
         val builder = AlertDialog.Builder(this)
         builder.setTitle(title)
